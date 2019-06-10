@@ -61,7 +61,7 @@ componentWillUnmount() {
     <LocName>
         {this.state.location}
     </LocName>
-    <LocImg src={'/img/'+this.state.location+'.jpg'}/>
+    <LocImg src={'./img/'+this.state.location+'.jpg'}/>
    
     <LocDate>{this.getLocTime().format('YYYY-MM-DD dddd')}</LocDate>
     <br/>
