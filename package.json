@@ -2,6 +2,8 @@
   "name": "testapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+
   "dependencies": {
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.25",
