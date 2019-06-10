@@ -1,6 +1,6 @@
 import React from "react";
 
-class Clock extends React.Component{
+class Clock01 extends React.Component{
 constructor(props){
   super(props);
   this.state ={ time:new Date()}
@@ -29,4 +29,4 @@ componentWillUnmount(){
   }
 }
 
-export default Clock;
+export default Clock01;

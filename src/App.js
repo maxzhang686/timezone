@@ -2,9 +2,10 @@ import React, { Component } from 'react';
  
 import DateDisplay from "./component/DateDisplay";
 // import Card from './Component/Card';
-// import Clock from './component/Clock01';
+// import Clock01 from './component/Clock01';
+import ClockWall from './page/ClockWall'
 import './App.css';
-import Clock from './Clock';
+
 
 
 
@@ -36,20 +37,20 @@ class App extends Component {
   render() {
     return ( 
       <div className="App">
-        <header className="App-header">
-          <Clock/>
+        
+          <ClockWall/>
 
 
 
           <DateDisplay 
-          message={`Start Time : ${new Date().toLocaleTimeString()}`} 
+          message={`Web Open at : ${new Date().toLocaleTimeString()}`} 
           owner={ {name:'jackie',age:'27'}}   
           />
           {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
           <Card  title={title[1]} subTitle={subTitle[1]} img={img[0]}/>
           <Card  title={title[2]} subTitle={subTitle[2]} img={img[0]}/> */}
 
-        </header>
+        
       </div>
     );
   }
