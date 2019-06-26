@@ -14,7 +14,7 @@ class ClockWall extends Component{
     <Wall> 
       {/* <Clock tz={tzs[0]}/> */}
       <Clock key={'Beijing'} city={'Beijing'}/>
-      <Clock key={'Beijing'} city={'Beijing'}/>
+      <Clock key={'Sydney'} city={'Sydney'}/>
     </Wall>
     );
   }

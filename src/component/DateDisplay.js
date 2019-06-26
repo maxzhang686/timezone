@@ -14,19 +14,11 @@ class DateDisplay extends React.Component{
                 <h3>my Age is {this.props.owner.age}</h3>
                 
                
-            </div> 
-            
+            </div>             
         );   
     }
-
 }
 export default DateDisplay;
-
-
-
- 
-
-
 
 
 // function DateDisplay(){

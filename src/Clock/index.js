@@ -38,7 +38,7 @@ resetTimer() {
   clearInterval(this.timerId)
   this.timerId = setInterval(() => {
       this.setState({time: this.getLocTime()})
-  },1000);
+  },200);
 }
 
 componentDidMount() {
@@ -60,7 +60,9 @@ componentWillUnmount() {
     </LocBar>
     <LocName>
         {this.state.location}
+  
     </LocName>
+    
     <LocImg src={'./img/'+this.state.location+'.jpg'}/>
    
     <LocDate>{this.getLocTime().format('YYYY-MM-DD dddd')}</LocDate>
@@ -75,16 +77,12 @@ componentWillUnmount() {
         <div style={{background:'#766d6dc9'}}>{this.getLocTime().format('mm')}</div>
         
         <div style={{background:'#766d6dc9'}}>{this.getLocTime().format('ss')}</div> */}
-        
-        
-       
-        
+   
     </LocTime>
+   </TimeCard>
 
 
 
-    
-</TimeCard>
 
     );
   }
