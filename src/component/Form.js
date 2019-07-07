@@ -8,7 +8,7 @@ class Formhang extends React.Component{
         this.state = {
         username:'',
         email:'',
-        city:''
+        city:'Sydney'
         };
     }
     // handleUsernameChange(e) {
@@ -24,7 +24,7 @@ class Formhang extends React.Component{
     // handleUsernameChange =(event)=>{
     //     this.setState({username: event.target.value})
     // }
-    handleFieldChange(e) {
+    handleFieldChange= (e) =>   {
         this.setState({
         [e.target.name]: e.target.value,
         });
@@ -34,6 +34,11 @@ class Formhang extends React.Component{
          e.preventDefault(); 
          console.log('Sumitted:'); 
          console.log(this.state);
+         this.setState({
+            username:'',
+            email:'',
+            city:'Sydney'
+         });
     }
 
 

@@ -39,7 +39,8 @@ class App extends Component {
 
   render() {
     return ( 
-      <div>
+      <div>  
+        <Formhang/>
         <div className="App">
             {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
             <Card  title={title[1]} subTitle={subTitle[1]} img={img[0]}/>
@@ -54,7 +55,7 @@ class App extends Component {
             <List superheroes={superheroes} />
             
         </div>
-            <Formhang/>
+          
 
 
       </div>
