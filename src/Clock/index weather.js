@@ -2,19 +2,21 @@ import React from 'react';
 // import moment from 'moment';
 import moment from 'moment-timezone';
 import styled from 'styled-components';
-
+import axios from 'axios';
 
 
 class Clock extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-        location: this.props.city,
+        locations: this.props.city,
+        location:{},
+        current:{},
     }
 }
 
 getLocTime() {
-  switch(this.state.location) {
+  switch(this.state.locations) {
       case 'Beijing':
       return moment().tz("Asia/Shanghai")
       case 'Moscow':
@@ -30,19 +32,29 @@ getLocTime() {
 handleClick = (e) => {
   this.resetTimer()
   this.setState({
-      location: e.target.id,
+      locations: e.target.id,
   })
 }
 
 resetTimer() {
   clearInterval(this.timerId)
   this.timerId = setInterval(() => {
-      this.setState({time : this.getLocTime()})
+      this.setState({time: this.getLocTime()})
   },200);
 }
 
-componentDidMount() {
-  this.resetTimer()
+async componentDidMount() {
+    this.resetTimer()
+    
+    //2.use promise 
+    axios
+    .get(
+      "https://api.apixu.com/v1/current.json?key=a3b32e153da34193a69111804192707&q=Beijing"
+    )
+    .then(response => {this.setState({...response.data})})
+    .catch(err => console.loge(err))
+    ;
+  
 }
 
 componentWillUnmount() {
@@ -59,11 +71,11 @@ componentWillUnmount() {
         )}
     </LocBar>
     <LocName>
-        {this.state.location}
+        {this.state.locations} {" "} {this.state.current.feelslike_c}
   
     </LocName>
     
-    <LocImg src={'./img/'+this.state.location+'.jpg'}/>
+    <LocImg src={'./img/'+this.state.locations+'.jpg'}/>
    
     <LocDate>{this.getLocTime().format('YYYY-MM-DD dddd')}</LocDate>
     <br/>

@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-class Formhang extends React.Component{
+class FormSignup extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -35,7 +35,7 @@ class Formhang extends React.Component{
          console.log('Sumitted:'); 
          console.log(this.state);
          this.setState({
-            username:'',
+            username:'n',
             email:'',
             city:'Sydney'
          });
@@ -68,7 +68,7 @@ class Formhang extends React.Component{
             //         </select>
             //     </div>
             // </form>
-            <form style={{ width: 300, margin: 20 }} onSubmit={this.handleSubmit.bind(this)}>
+            <form style={{margin: 20 }} onSubmit={this.handleSubmit.bind(this)}>
             <div className="form-group">
             <label htmlFor="username">Username</label>
             <input type="text" className="form-control" id="username" name="username" 
@@ -98,4 +98,4 @@ class Formhang extends React.Component{
         );
     }
 }
-export default Formhang;
+export default FormSignup;

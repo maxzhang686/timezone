@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://maxzhang686.github.io/timezone/",
   "dependencies": {
+    "axios": "^0.19.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.25",
     "react": "^16.8.6",

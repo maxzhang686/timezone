@@ -6,9 +6,13 @@ import DateDisplay from "./component/DateDisplay";
 import ClockWall from './page/ClockWall'
 import StopWatch from './component/Stopwatch';
 import List from "./component/Lists";
-import Formhang from "./component/Form";
+import FormSignup from "./component/Form";
+import Button from './component/Button';
+import Example from './component/Example-promise';
+import Flickrimg from './component/Flickrimg';
 
 import './App.css';
+
 
 
 // const title = ['Dog', 'Cat', 'Bird'];
@@ -40,19 +44,49 @@ class App extends Component {
   render() {
     return ( 
       <div>  
-        <Formhang/>
+
+        
         <div className="App">
+            
+
+            <hr/>
             {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
             <Card  title={title[1]} subTitle={subTitle[1]} img={img[0]}/>
             <Card  title={title[2]} subTitle={subTitle[2]} img={img[0]}/> */}
-            
-            <ClockWall/>    
+            <h3 style={{color:'#ff0000'}}>Stateful component</h3>
+            <ClockWall/> 
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>React props and State</h3>
             <DateDisplay 
             message={`Web Open at : ${new Date().toLocaleTimeString()}`} 
             owner={ {name:'jackie',age:'27'}}   
             />
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Events handling in React</h3>
             <StopWatch/>
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Rendering list in React</h3>
             <List superheroes={superheroes} />
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Forms handling in React</h3>
+            <FormSignup/> 
+            
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Ajax (Promise,Axios)</h3>
+            <Example/>
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Ajax (async/await): </h3>
+            <Button buttonType="primary" label={<h1>Show temperature</h1>}/>
+
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Ajax (Fetch):</h3>
+            <Flickrimg/>
             
         </div>
           
