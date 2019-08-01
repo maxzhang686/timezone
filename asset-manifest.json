@@ -1,13 +1,13 @@
 {
-  "main.css": "/timezone/static/css/main.faa91d67.chunk.css",
-  "main.js": "/timezone/static/js/main.c1f3110a.chunk.js",
-  "main.js.map": "/timezone/static/js/main.c1f3110a.chunk.js.map",
-  "runtime~main.js": "/timezone/static/js/runtime~main.6463bf7a.js",
-  "runtime~main.js.map": "/timezone/static/js/runtime~main.6463bf7a.js.map",
-  "static/js/2.2067ddb9.chunk.js": "/timezone/static/js/2.2067ddb9.chunk.js",
-  "static/js/2.2067ddb9.chunk.js.map": "/timezone/static/js/2.2067ddb9.chunk.js.map",
-  "index.html": "/timezone/index.html",
-  "precache-manifest.4407c463d11e0b7ed98e0cc1aa7ec43c.js": "/timezone/precache-manifest.4407c463d11e0b7ed98e0cc1aa7ec43c.js",
-  "service-worker.js": "/timezone/service-worker.js",
-  "static/css/main.faa91d67.chunk.css.map": "/timezone/static/css/main.faa91d67.chunk.css.map"
+  "main.css": "/reactapp/static/css/main.faa91d67.chunk.css",
+  "main.js": "/reactapp/static/js/main.1f954ac8.chunk.js",
+  "main.js.map": "/reactapp/static/js/main.1f954ac8.chunk.js.map",
+  "runtime~main.js": "/reactapp/static/js/runtime~main.7f5faac6.js",
+  "runtime~main.js.map": "/reactapp/static/js/runtime~main.7f5faac6.js.map",
+  "static/js/2.68e6e931.chunk.js": "/reactapp/static/js/2.68e6e931.chunk.js",
+  "static/js/2.68e6e931.chunk.js.map": "/reactapp/static/js/2.68e6e931.chunk.js.map",
+  "index.html": "/reactapp/index.html",
+  "precache-manifest.5936f723cd5afe4881ec461f1b049ed5.js": "/reactapp/precache-manifest.5936f723cd5afe4881ec461f1b049ed5.js",
+  "service-worker.js": "/reactapp/service-worker.js",
+  "static/css/main.faa91d67.chunk.css.map": "/reactapp/static/css/main.faa91d67.chunk.css.map"
 }
