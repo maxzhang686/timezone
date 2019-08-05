@@ -55,7 +55,7 @@ class Example extends React.Component{
       //Show responded data
         return(
             <div>
-            {this.state.location.name} is {this.state.current.feelslike_c}
+            {this.state.location.name} is {this.state.current.feelslike_c} degrees.
             </div>
         );
     }

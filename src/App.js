@@ -10,6 +10,7 @@ import FormSignup from "./component/Form";
 import Button from './component/Button';
 import Example from './component/Example-promise';
 import Flickrimg from './component/Flickrimg';
+import Flicktry from './component/Flickrtry'
 
 import './App.css';
 
@@ -60,7 +61,7 @@ class App extends Component {
             <h3 style={{color:'#ff0000'}}>React props and State</h3>
             <DateDisplay 
             message={`Web Open at : ${new Date().toLocaleTimeString()}`} 
-            owner={ {name:'jackie',age:'27'}}   
+            owner={ {name:'Louis',age:'27'}}   
             />
 
             <hr/>
@@ -85,9 +86,12 @@ class App extends Component {
 
 
             <hr/>
-            <h3 style={{color:'#ff0000'}}>Ajax (Fetch):</h3>
+            <h3 style={{color:'#ff0000'}}>Ajax (Fetch/Flickr Img Search):</h3>
             <Flickrimg/>
-            
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>Flickr Img Search:</h3>
+            <Flicktry/>
         </div>
           
 

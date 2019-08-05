@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
 import '../App.css';
 
 // const Card = function (props){
@@ -21,13 +21,14 @@ class Card extends Component {
     return ( 
       <div className="App">
     
-        
-        <h1>{this.props.title}</h1>
-        <small>{this.props.subTitle}</small>
+        <CardDisplay>  
+        <h1>{this.props.cardInfo.title}</h1>
+        <small>{this.props.cardInfo.subTitle}</small>
         <br/>
-        <img src={this.props.img} alt=""/>
+        <img src={this.props.cardInfo.img} alt=""/>
         
-           
+        </CardDisplay>
+      
       </div>
     );
   }
@@ -36,3 +37,14 @@ class Card extends Component {
 export default Card;
 
  
+const CardDisplay = styled.div`
+    display: inline-block;
+  text-align: center;
+  margin: 10px;
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  background-color: #7b72722e;
+  box-shadow: 10px 10px 10px grey;
+  border-radius:10px;
+`;
