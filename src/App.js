@@ -12,7 +12,22 @@ import Example from './component/Example-promise';
 import Flickrimg from './component/Flickrimg';
 import Flicktry from './component/Flickrtry'
 
+import ReduxApp from './page/ReduxApp';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers';
+
 import './App.css';
+
+let initialStore = { };
+
+const store = createStore(
+  rootReducer,
+  initialStore,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
+
+
 
 
 
@@ -48,13 +63,15 @@ class App extends Component {
 
         
         <div className="App">
-            
+        
+        
+            <h3 style={{color:'#ff0000'}}>React Workshop</h3>
 
             <hr/>
             {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
             <Card  title={title[1]} subTitle={subTitle[1]} img={img[0]}/>
             <Card  title={title[2]} subTitle={subTitle[2]} img={img[0]}/> */}
-            <h3 style={{color:'#ff0000'}}>Stateful component</h3>
+            <h3 style={{color:'#ff0000'}}>Stateful Component/Lifecycle</h3>
             <ClockWall/> 
 
             <hr/>
@@ -92,6 +109,19 @@ class App extends Component {
             <hr/>
             <h3 style={{color:'#ff0000'}}>Flickr Img Search:</h3>
             <Flicktry/>
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}>ReduxApp: </h3>
+            <Provider store={store}>
+            <ReduxApp/>
+            </Provider>
+
+            <hr/>
+            <h3 style={{color:'#ff0000'}}></h3>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
           
 
