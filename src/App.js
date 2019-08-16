@@ -66,6 +66,10 @@ class App extends Component {
         
         
             <h3 style={{color:'#ff0000'}}>React Workshop</h3>
+            
+            <hr/>
+            <h3 style={{color:'#ff0000'}}><a href='https://maxzhang686.github.io/weatherapp/'>Weatherapp/React</a></h3>
+            <p>A single page App with React</p>
 
             <hr/>
             {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
@@ -116,8 +120,7 @@ class App extends Component {
             <ReduxApp/>
             </Provider>
 
-            <hr/>
-            <h3 style={{color:'#ff0000'}}></h3>
+            
             <br/>
             <br/>
             <br/>

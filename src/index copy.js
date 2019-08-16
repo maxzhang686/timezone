@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 
 import ReduxApp from './page/ReduxApp';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
-import * as serviceWorker from './serviceWorker';
 
 let initialStore = { };
 
@@ -19,7 +18,7 @@ const store = createStore(
   );
 
 ReactDOM.render(
-  <App/>;
+  
   <Provider store={store}>
     <ReduxApp/>
   </Provider>

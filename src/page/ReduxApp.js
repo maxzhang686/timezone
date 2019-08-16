@@ -23,7 +23,6 @@ class ReduxApp extends Component {
   handleSubmit = (e) =>{
     //change username in store
     e.preventDefault(); 
-    
     console.log(this.state)
     const user = {userName : this.state.userName}
     this.props.changeUserName(user)
@@ -39,7 +38,6 @@ class ReduxApp extends Component {
     const logged = {loggedState : 'not_logged_in',userName:"..." }
     this.props.changeLoggedState(logged);
     this.props.changeUserName(logged);
-
   }
 
   logIn = (param) => {
@@ -51,6 +49,7 @@ class ReduxApp extends Component {
 
   };
 
+  
   componentDidMount() {
     this.logIn();
   }

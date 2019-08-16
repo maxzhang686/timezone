@@ -21,22 +21,24 @@ class Flickrimg extends React.Component{
 //   }
 // }
 
-  handldeFlickrimg = () =>{ 
-    fetch('https://cors-anywhere.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags='+this.state.tag+'&format=json&nojsoncallback=true')
+  handldeFlickrimg = async() =>{ 
+  await fetch('https://cors-anywhere.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags='+this.state.tag+'&format=json&nojsoncallback=true')
   .then(
     function(response) {
     return response.json();
   })
   .then( data => this.setState({data}))
   .catch(err =>console.log('error'))
-  }
+  console.log('request data');
+  console.log(this.state.data)
 
+  }
 
   getImgs = () => {
     return(
         <div>
             {this.state.data.items.map((item,index) => {
-                    console.log(item)
+                    //console.log(item)
                     return index < 3 && <Card key={index} cardInfo = {{title:item.title, subTitle:'', img: item.media.m}} />
                 })
             }
