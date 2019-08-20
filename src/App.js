@@ -68,9 +68,11 @@ class App extends Component {
             <h3 style={{color:'#ff0000'}}>React Workshop</h3>
             
             <hr/>
-            <h3 style={{color:'#ff0000'}}><a href='https://maxzhang686.github.io/weatherapp/'>Weatherapp/React</a></h3>
-            <p>A single page App with React</p>
-
+            <h3 style={{color:'#ff0000'}}>A single page App with React/Router</h3>
+            <p> <a href='https://maxzhang686.github.io/maxresume'>Resume with Live Chat</a></p>
+            <p><a href='https://maxzhang686.github.io/maxresume/#/weather'>WeatherApp</a></p>
+            
+            
             <hr/>
             {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
             <Card  title={title[1]} subTitle={subTitle[1]} img={img[0]}/>
