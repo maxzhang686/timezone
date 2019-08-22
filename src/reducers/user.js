@@ -2,23 +2,23 @@
 //   switch (action.type) {
 //     case "SIGN_IN":
 //       return Object.assign({}, state, { status: "signed_in" });
-    
-//     default: 
+
+//     default:
 //     return state;
 //   }
 // };
 
-//es6 
-export const user = (state = {userName:"Max"}, action) => {
+//es6
+export const user = (state = { userName: "Max" }, action) => {
   switch (action.type) {
     case "CHANGE_USER_NAME":
-      return{
-      ...state, 
-      userName: action.userName
+      return {
+        ...state,
+        userName: action.userName
       };
-    
-    default: 
-    return state;
+
+    default:
+      return state;
   }
 };
 

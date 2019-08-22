@@ -1,13 +1,13 @@
-export const logged = (state = {loggedState:"logged_in"}, action) => {
+export const logged = (state = { loggedState: "logged_in" }, action) => {
   switch (action.type) {
     case "CHANGE_LOGGED_STATE":
-      return{
-      ...state, 
-      loggedState: action.loggedState
+      return {
+        ...state,
+        loggedState: action.loggedState
       };
-    
-    default: 
-    return state;
+
+    default:
+      return state;
   }
 };
 
