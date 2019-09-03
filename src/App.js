@@ -7,9 +7,9 @@ import ClockWall from "./page/ClockWall";
 import StopWatch from "./component/Stopwatch";
 import List from "./component/Lists";
 import FormSignup from "./component/Form";
-import Button from "./component/Button";
-import Example from "./component/Example-promise";
-import Flickrimg from "./component/Flickrimg";
+import AwaitButton from "./component/Await";
+import Promise from "./component/Promise";
+import FlickrimgFetch from "./component/FlickrimgFetch";
 import Flicktry from "./component/Flickrtry";
 
 import ReduxApp from "./page/ReduxApp";
@@ -35,7 +35,7 @@ const store = createStore(
 //   'https://picsum.photos/id/237/200/300'
 // ]
 
-const superheroes = ["Batman", "Superman"];
+const superheroes = ["Batman", "Superman", "Hello Kitty"];
 class App extends Component {
   // constructor(props){
   //   super(props);
@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          <h3 style={{ color: "#ff0000" }}>React Workshop</h3>
+          <h3 style={{ color: "#ff0000" }}>React Example</h3>
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>
@@ -101,19 +101,19 @@ class App extends Component {
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>Ajax (Promise,Axios)</h3>
-          <Example />
+          <Promise />
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>Ajax (async/await): </h3>
-          <Button buttonType="primary" label={<h1>Show temperature</h1>} />
+          <AwaitButton buttonType="primary" label={<h1>Show temperature</h1>} />
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>Ajax (Fetch/Flickr Img Search):</h3>
-          <Flickrimg />
+          <FlickrimgFetch />
 
-          <hr />
+          {/* <hr />
           <h3 style={{ color: "#ff0000" }}>Flickr Img Search:</h3>
-          <Flicktry />
+          <Flicktry /> */}
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>ReduxApp: </h3>

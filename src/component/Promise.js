@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class Example extends React.Component {
+class Promise extends React.Component {
   // constructor(){
   //   super();
   //   this.state ={ weather:{}};
@@ -57,4 +57,4 @@ class Example extends React.Component {
     );
   }
 }
-export default Example;
+export default Promise;

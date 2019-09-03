@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class Button extends React.Component {
+class AwaitButton extends React.Component {
   state = {
     isLoading: false,
     current: {},
@@ -26,9 +26,7 @@ class Button extends React.Component {
 
   render() {
     //if(this.state.isLoading) return "please wait...";
-    const weatherInfo = `${this.state.location.name} is ${
-      this.state.current.feelslike_c
-    } degrees`;
+    const weatherInfo = `${this.state.location.name} is ${this.state.current.feelslike_c} degrees`;
 
     return (
       <div>
@@ -44,7 +42,7 @@ class Button extends React.Component {
     );
   }
 }
-export default Button;
+export default AwaitButton;
 // function Button(props) {
 //     return (
 //     <button className={`btn btn-${props.buttonType}`}>
