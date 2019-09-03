@@ -67,11 +67,6 @@ class App extends Component {
               Resume with Live Chat
             </a>
           </p>
-          <p>
-            <a href="https://maxzhang686.github.io/maxresume/#/weather">
-              WeatherApp
-            </a>
-          </p>
 
           <hr />
           {/* <Card  title={title[0]} subTitle={subTitle[0]} img={img[0]}/>
