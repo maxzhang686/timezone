@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          <h3 style={{ color: "#ff0000" }}>React Example</h3>
+          <h3 style={{ color: "#ff0000" }}>React Practise</h3>
 
           <hr />
           <h3 style={{ color: "#ff0000" }}>
