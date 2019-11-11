@@ -23,7 +23,7 @@ class Promise extends React.Component {
     //1.use async/await
     try {
       const response = await axios.get(
-        "https://api.apixu.com/v1/current.json?key=a3b32e153da34193a69111804192707&q=Beijing"
+        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=Sydney"
       );
       //use destructring to put all data's property-value pairs into state
       this.setState({ ...response.data, isLoading: false });
@@ -36,13 +36,13 @@ class Promise extends React.Component {
     //2.use promise
     axios
       .get(
-        "https://api.apixu.com/v1/current.json?key=a3b32e153da34193a69111804192707&q=Beijing"
+        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=Sydney"
       )
       .then(response => {
         //use destructring to put all data's property-value pairs into state
         this.setState({ ...response.data });
       })
-      .catch(err => console.loge(err));
+      .catch(error => console.loge(error));
   }
 
   render() {
@@ -52,7 +52,7 @@ class Promise extends React.Component {
     //Show responded data
     return (
       <div>
-        {this.state.location.name} is {this.state.current.feelslike_c} degrees.
+        {this.state.location.name} is {this.state.current.temperature} degrees.
       </div>
     );
   }

@@ -13,7 +13,7 @@ class AwaitButton extends React.Component {
     //1.use async/await
     try {
       const response = await axios.get(
-        "https://api.apixu.com/v1/current.json?key=a3b32e153da34193a69111804192707&q=Canberra"
+        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=Canberra"
       );
       //use destructring to put all data's property-value pairs into state
       this.setState({ ...response.data });
@@ -26,7 +26,7 @@ class AwaitButton extends React.Component {
 
   render() {
     //if(this.state.isLoading) return "please wait...";
-    const weatherInfo = `${this.state.location.name} is ${this.state.current.feelslike_c} degrees`;
+    const weatherInfo = `${this.state.location.name} is ${this.state.current.temperature} degrees`;
 
     return (
       <div>
