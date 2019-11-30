@@ -7,9 +7,9 @@ class Promise extends React.Component {
   //   this.state ={ weather:{}};
   // }
   state = {
-    isLoading: false,
-    current: {},
-    location: {}
+    //isLoading: false
+    // current: {},
+    // location: {}
   };
 
   async componentDidMount() {
@@ -19,40 +19,50 @@ class Promise extends React.Component {
     //   )
     //   .then(response => console.log(response))
     //   ;
-    this.setState({ isLoading: true });
+
+    // this.setState({ isLoading: true });
+
     //1.use async/await
-    try {
-      const response = await axios.get(
-        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=Sydney"
-      );
-      //use destructring to put all data's property-value pairs into state
-      this.setState({ ...response.data, isLoading: false });
-      console.log(response.data);
-    } catch (err) {
-      console.log(err);
-      this.setState({ isLoading: false });
-    }
+    // try {
+    //   const response = await axios.get(
+    //     "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/c3ed55bedc8f402d7fcfd7078fb8f5a4/-33.8688,151.2093?units=si"
+    //   );
+    //   //use destructring to put all data's property-value pairs into state
+    //   this.setState({ ...response.data, isLoading: false });
+    //   console.log(response.data);
+    // } catch (err) {
+    //   console.log(err);
+    //   this.setState({ isLoading: false });
+    // }
 
     //2.use promise
     axios
       .get(
-        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=Sydney"
+        "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/c3ed55bedc8f402d7fcfd7078fb8f5a4/-33.8688,151.2093?units=si"
       )
       .then(response => {
         //use destructring to put all data's property-value pairs into state
-        this.setState({ ...response.data });
+        this.setState(response.data);
+        console.log(response.data);
       })
-      .catch(error => console.loge(error));
+      .catch(err => console.loge(err));
   }
 
   render() {
     //if server hasn't reponded - show message
-    if (this.state.isLoading) return "please wait...";
-
+    // if (this.state.isLoading) return "please wait...";
+    const data = this.state.data;
     //Show responded data
     return (
       <div>
-        {this.state.location.name} is {this.state.current.temperature} degrees.
+        <div>
+          {data && data.currently && (
+            <p>
+              {data.timezone} is {data.currently.temperature} degrees.
+            </p>
+          )}
+        </div>
+        <p>{JSON.stringify(data)}</p>
       </div>
     );
   }
