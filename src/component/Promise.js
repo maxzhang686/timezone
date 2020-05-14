@@ -51,18 +51,18 @@ class Promise extends React.Component {
   render() {
     //if server hasn't reponded - show message
     // if (this.state.isLoading) return "please wait...";
-    const data = this.state.data;
+    const data = this.state;
     //Show responded data
     return (
       <div>
         <div>
           {data && data.currently && (
             <p>
-              {data.timezone} is {data.currently.temperature} degrees.
+              {this.state.timezone} is {data.currently.temperature} degrees.
             </p>
           )}
         </div>
-        <p>{JSON.stringify(data)}</p>
+        {/* <p>{JSON.stringify(data)}</p> */}
       </div>
     );
   }
