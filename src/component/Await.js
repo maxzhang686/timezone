@@ -4,8 +4,8 @@ import axios from "axios";
 class AwaitButton extends React.Component {
   state = {
     isLoading: false,
-    current: {},
-    location: {}
+    currently: {},
+    timezone: null
   };
 
   handleFetchWeather = async () => {
@@ -13,11 +13,12 @@ class AwaitButton extends React.Component {
     //1.use async/await
     try {
       const response = await axios.get(
-        "http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=canberra"
+        //"http://api.weatherstack.com/current?access_key=96c64b5837e59f09ae6d8d56f134fc63&query=canberra"
+        "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/c3ed55bedc8f402d7fcfd7078fb8f5a4/-33.8688,151.2093?units=si"
       );
       //use destructring to put all data's property-value pairs into state
       this.setState({ ...response.data });
-      console.log(response.data);
+      console.log(this.state);
     } catch (err) {
       console.log(err);
       this.setState({ isLoading: false });
@@ -26,7 +27,7 @@ class AwaitButton extends React.Component {
 
   render() {
     //if(this.state.isLoading) return "please wait...";
-    const weatherInfo = `${this.state.location.name} is ${this.state.current.temperature} degrees`;
+    const weatherInfo = `${this.state.timezone} is ${this.state.currently.temperature} degrees`;
 
     return (
       <div>
